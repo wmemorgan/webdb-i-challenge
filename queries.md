@@ -89,7 +89,7 @@
   DELETE FROM Customers
       WHERE customerid IN (SELECT c.customerid
       FROM Customers c
-      LEFT JOIN Orders 
+      LEFT JOIN Orders o
       ON c.customerid = o.customerid
       WHERE orderid is NULL);
   ```
